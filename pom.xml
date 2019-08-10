@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.leig.smart4j</groupId>
+    <artifactId>smart-framework</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <lombok.version>1.18.8</lombok.version>
+        <servlet.version>4.0.1</servlet.version>
+        <jsp.version>2.2</jsp.version>
+        <jstl.version>1.2</jstl.version>
+        <junit.version>4.12</junit.version>
+        <slf4j.version>1.7.26</slf4j.version>
+        <mysql.version>5.1.47</mysql.version>
+        <lang3.version>3.9</lang3.version>
+        <collections4.version>4.4</collections4.version>
+        <dbutils.version>1.7</dbutils.version>
+        <dbcp2.version>2.6.0</dbcp2.version>
+        <fastjson.version>1.2.58</fastjson.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>${servlet.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
+            <dependency>
+                <groupId>javax.servlet.jsp</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${jsp.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/javax.servlet.jsp.jstl/jstl -->
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/junit/junit -->
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${lang3.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${collections4.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils -->
+            <dependency>
+                <groupId>commons-dbutils</groupId>
+                <artifactId>commons-dbutils</artifactId>
+                <version>${dbutils.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-dbcp2</artifactId>
+                <version>${dbcp2.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Servlet -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- JSP -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- JSTL -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- SLF4J -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <!-- MySQL -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- Apache Commons Lang -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <!-- Apache Commons Collections -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+        </dependency>
+        <!-- Apache Commons DbUtils -->
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+        </dependency>
+        <!-- Apache DBCP -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Compile -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <!-- Test -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            <!-- Tomcat -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <path>/${project.artifactId}</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
